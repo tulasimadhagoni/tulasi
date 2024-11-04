@@ -104,5 +104,5 @@ class TicTacToe:
             self.current_player = PLAYER_A if self.current_player == PLAYER_B else PLAYER_B
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     game = TicTacToe()
