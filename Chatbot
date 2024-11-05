@@ -57,21 +57,16 @@ class Chatbot:
         else:
             return random.choice(self.responses["default"])
 
-# Example usage
-my_chatbot = Chatbot("Tulasi")
-print(my_chatbot.greet()) 
-print(my_chatbot.respond("What time is it?"))
-print(my_chatbot.respond("Hello there, Tulasi!"))
-print(my_chatbot.respond("Goodbye!"))
-def start_conersation(self):
-        print(f"Hello,I'm {self.name}!What can I do for you?")
-        while True:
-            user_input=input("You:")
-            if user_input.lower()=="quit":
-                print(self.say_goodbye())
-                break
-            else:
-                response=self.respond(user_input)
-                print(f"{self.name}:{response}")
+    def start_conversation(self):
+            print(f"Hello,I'm {self.name}!What can I do for you?")
+            while True:
+                user_input=input("You:")
+                if user_input.lower()=="quit":
+                    print(self.say_goodbye())
+                    break
+                else:
+                    response=self.respond(user_input)
+                    print(f"{self.name}:{response}")
 
 my_chatbot=Chatbot("Tulasi")               
+my_chatbot.start_conversation()
